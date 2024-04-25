@@ -93,7 +93,7 @@
     font-family:'Nunito Sans';
     font-size: 17px;
     line-height: 32px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--card-p);
 }
 .cntr .flag-details .list-things .informs .infor p span{
@@ -112,13 +112,14 @@
 .cntr .flag-details .list-things p{
     font-size: 16px;
     line-height: 32px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .border-countiries {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -133,6 +134,9 @@
 .border-countiries .buttonCntrs{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 7px;
 }
 
@@ -155,6 +159,15 @@
 .border-countiries .buttonCntrs a:hover{
     box-shadow: 5px 3px 18px rgba(0, 0, 0, 0.384);
 }
+
+.h4-border{
+    font-family:'Nunito Sans';
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--card-p);
+}
 .loader{
     display: flex;
     flex-direction: row;
@@ -172,3 +185,213 @@
 .hidden{
     display: none;
 }
+
+
+@media (max-width: 1300px) {
+    .details .infos{
+        gap: 40px;
+    }
+
+    .details .infos .photo img{
+        width:500px;
+        height: 342px;
+        border-radius: 10px;
+    }
+    
+    .cntr .flag-details .list-things .informs{
+        display: flex;
+        gap: 50px;
+        padding-bottom: 35px;
+    }
+  }
+
+
+  @media (max-width: 1140px) {
+    .details .infos{
+        gap: 30px;
+        align-items: center;
+    }
+
+    .details .infos .photo img{
+        width:400px;
+        height: 242px;
+        border-radius: 10px;
+    }
+    
+    .cntr .flag-details .list-things .informs{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 25px;
+    }
+  }
+
+
+  @media (max-width: 950px) {
+    .details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 60px;
+    }
+
+    .details .infos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        gap: 20px;
+
+    }
+
+    .details .infos .photo img{
+        width:400px;
+        height: 242px;
+        border-radius: 10px;
+    }
+    .cntr .flag-details .list-things {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding-bottom: 35px;
+    }
+    
+    .cntr .flag-details .list-things .informs{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 25px;
+    }
+  }
+
+
+  @media (max-width: 640px) {
+   
+    .details .infos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; 
+        gap: 30px;
+
+    }
+
+    .details .infos .photo img{
+        width:360px;
+        height: 229px;
+        border-radius: 10px;
+    }
+
+    .cntr .flag-details .list-things {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+        padding-bottom: 35px;
+    }
+    
+  }
+
+
+  @media (max-width: 580px) {
+   
+
+    .section-btn .btn-back{
+        font-family: 'Nunito Sans';
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 300;
+        width: 126px;
+        height: 36px;
+        border-radius: 6px;
+        padding: 6px 15px;
+    }
+    
+    .cntr .flag-details .list-things .informs .infor p{
+        font-family:'Nunito Sans';
+        font-size: 15px;
+        line-height: 32px;
+        font-weight: 700;
+        color: var(--card-p);
+    }
+    .cntr .flag-details .list-things .informs .infor p span{
+        font-family:'Nunito Sans';
+        font-size: 15px;
+        line-height: 32px;
+        font-weight: 400;
+        color: var(--card-span);
+    }
+    
+    .cntr .flag-details .list-things h3{
+       font-size:28px;
+       line-height: 39px;
+       font-weight: 800;
+    }
+    
+    .cntr .flag-details .list-things p{
+        font-size: 15px;
+        line-height: 29px;
+        font-weight: 700;
+    }
+
+    
+
+    .details .infos .photo img{
+        width:350px;
+        height: 229px;
+        border-radius: 10px;
+    }
+    
+  }
+
+  @media (max-width: 470px) {
+    
+
+    .section-btn .btn-back{
+        font-family: 'Nunito Sans';
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 300;
+        width: 106px;
+        height: 33px;
+        border-radius: 6px;
+        padding: 5px 14px;
+    }
+    .cntr .flag-details .list-things .informs .infor p{
+        font-family:'Nunito Sans';
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 600;
+        color: var(--card-p);
+    }
+    .cntr .flag-details .list-things .informs .infor p span{
+        font-family:'Nunito Sans';
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 400;
+        color: var(--card-span);
+    }
+    
+    .cntr .flag-details .list-things h3{
+       font-size:22px;
+       line-height: 30px;
+       font-weight: 800;
+    }
+    
+    .cntr .flag-details .list-things p{
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+
+    
+
+    .details .infos .photo img{
+        width:320px;
+        height: 229px;
+        border-radius: 10px;
+    }
+    
+  }

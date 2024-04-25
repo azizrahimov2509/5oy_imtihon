@@ -73,10 +73,10 @@ function createUI(item) {
                                 <div class="border-countiries">
                                     <p>Border Counties:</p>
                                     <div class="buttonCntrs">
-                                        ${item.borders === null 
-                                            ? `<p>No border countries</p>` 
-                                            : item.borders.map(border => `<a href="about.html?slug=${border.slug}" class="bndCountries">${border.common}</a>`).join('')
-                                        }
+                                    ${item.borders.length === 0
+                                        ? '<h4 class = "h4-border">There are no border countries</h4>' 
+                                        : item.borders.map(border => `<a href="about.html?slug=${border.slug}" class="bndCountries">${border.common}</a>`).join('')
+                                    }
                                     </div>
                                 </div> 
                             </div>
