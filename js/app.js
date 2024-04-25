@@ -44,7 +44,7 @@ function createUI(data) {
     data.data.forEach((item) => {
         const div = document.createElement('div');
         div.classList.add('flag-list');
-        const formattedPopulation = item.population.toLocaleString('en-US');
+        const formattedPopulation = item.population?.toLocaleString('en-US');
         div.innerHTML = `
         <a href="about.html?slug=${item.name.slug}" class="btn-details">
             <img src=${item.flags.png}> 
