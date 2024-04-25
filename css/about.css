@@ -1,0 +1,174 @@
+:root {
+    --header-bg: #fff;
+    --header-textColor: #111517;
+    --main-bg: #FAFAFA;
+    --input-bg: #fff;
+    --input-textColor: #000;
+    --input-placeholder: #848484;
+    --option-bg: #fff;
+    --card-bg: #ffffff;
+    --card-h: #111517;
+    --card-span: #111517;
+    --card-p: #111517;
+  }
+
+  .dark-theme {
+    --header-bg: #2b3844;
+    --header-textColor: #fff;
+    --main-bg: #202c36;
+    --input-bg: #2b3844;
+    --input-textColor: #fff;
+    --input-placeholder: #fff;
+    --option-bg: #2b3844;
+    --card-bg: #2b3844;
+    --card-h: #fff;
+    --card-span: #fff;
+    --card-p: #fff;
+  }
+
+.section-btn{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 55px;
+}
+
+.section-btn .btn-back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: 'Nunito Sans';
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    width: 136px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 7px 20px;
+    background-color: var(--card-bg);
+    color: var(--card-p);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details{
+    display: flex;
+    margin-top: 60px;
+    
+}
+
+.details .infos{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.details .infos .photo img{
+    width:560px;
+    height: 402px;
+    border-radius: 10px;
+}
+
+.cntrs{
+    display: flex;
+    flex-direction: column;
+}
+
+.cntrs .cntr{
+    display: flex;
+    flex-direction: row;
+}
+
+.cntr .flag-details .list-things .informs{
+    display: flex;
+    gap: 80px;
+    padding-bottom: 35px;
+}
+
+.cntr .flag-details .list-things .informs .infor{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.cntr .flag-details .list-things .informs .infor p{
+    font-family:'Nunito Sans';
+    font-size: 17px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--card-p);
+}
+.cntr .flag-details .list-things .informs .infor p span{
+    font-family:'Nunito Sans';
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: 300;
+    color: var(--card-span);
+}
+
+.cntr .flag-details .list-things h3{
+   font-size:32px;
+   line-height: 44px;
+}
+
+.cntr .flag-details .list-things p{
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.border-countiries {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.border-countiries p {
+    font-family:'Nunito Sans';
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 600;
+  color: var(--card-p);
+}
+
+.border-countiries .buttonCntrs{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+
+.border-countiries .buttonCntrs a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Nunito Sans';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    color: var(--card-p);
+    box-shadow: 5px 3px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    background-color: var(--card-bg);
+    padding: 6px 10px;
+}
+
+.border-countiries .buttonCntrs a:hover{
+    box-shadow: 5px 3px 18px rgba(0, 0, 0, 0.384);
+}
+.loader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.error{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}

@@ -5,9 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/style.css">
     <script defer src="js/about.js"></script>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+           <div class="header-logo">
+               <h2>Where in the world?</h2>
+   
+               <div class="parentBtn"> 
+                   <a id="darkModeBtn"  class="btn"> 
+                   <img id="darkModeImg" src="images/Path.svg" width="17" height="16" alt="mode icon" width="45">Dark Mode</a>
+                 </div>
+           </div>
+   
+        </div>
+      </header>
+
+      <section class="search">
+        <div class="container container-search">
+            <div class="section-btn">
+                <a href="index.html" class="btn-back"><img src="images/black-call.svg" id="call-black" alt="#">Back</a>
+            </div>
+
+            <div class="details" id="details">
+               
+            </div> 
+            <div id="loader" class="loader hidden">
+                    <img src="images/Magnify@1.25x-1.0s-200px-200px.gif" alt="">
+                </div>
+            
+                <div id="error" class="error hidden">
+                    <h2 style="color: red;">Xatolik yuz berdi!</h2>
+                </div>
+        </div>
+    </section>
 </body>
 </html>
+
+
+
+
+

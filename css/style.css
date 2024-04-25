@@ -119,13 +119,13 @@ header{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 50px;
   position: relative;
 }
 .search-form input{
     font-family:  'Nunito Sans';
     padding: 10px 16px;
-    padding-left: 50px;
+    padding-left: 60px;
     font-size: 16px;
     line-height: 20px;
    font-weight: 400;
@@ -140,7 +140,7 @@ header{
 
 ::placeholder{
     font-family:  'Nunito Sans';
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
     font-weight: 400;
     color: var(--input-placeholder);
@@ -148,7 +148,7 @@ header{
 
 .search-form .img{
     position: absolute;
-    top: 59px;
+    top: 68px;
     left: 30px;
 }
 
@@ -169,8 +169,10 @@ header{
 
 
 
+
+
 .flags{
-    margin-top: 30px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -183,19 +185,21 @@ header{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
   width: 267px;
-  height: 336px;
+  height: 345px;
   box-shadow: 0px 0px 7px 2px #00000008;
   border-radius: 6px;
   background-color: var(--card-bg);
+  cursor: pointer;
 }
 
 .flag-list img{
-  width: 265px;
-  height: 184px;
+  width: 267px;
+  height: 160px; 
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  background-size: cover;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .list-things{
@@ -204,7 +208,8 @@ header{
   align-items: flex-start;
   gap: 20px;
   padding-left: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  margin-top: 20px;
 }
 
  .list-things h3{
@@ -219,7 +224,6 @@ header{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
   gap: 13px;
 }
 
@@ -239,6 +243,13 @@ header{
 }
 
 .loader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.error{
   display: flex;
   flex-direction: row;
   align-items: center;

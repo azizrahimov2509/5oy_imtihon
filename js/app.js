@@ -36,25 +36,27 @@ function fetchImages(query) {
 fetchImages("https://frontend-mentor-apis-6efy.onrender.com/countries");
 
 
+
 //UI
 
-function createUI(data){
-
-    flags.innerHTML='';
-    const users = Array.isArray(data) ? data : [data];
+function createUI(data) {
+    flags.innerHTML = '';
     data.data.forEach((item) => {
         const div = document.createElement('div');
         div.classList.add('flag-list');
-        div.innerHTML =`
-        <img src=${item.flags.png}> 
+        const formattedPopulation = item.population.toLocaleString('en-US');
+        div.innerHTML = `
+        <a href="about.html?slug=${item.name.slug}" class="btn-details">
+            <img src=${item.flags.png}> 
         <div class="list-things">
-             <h3>${item.name.common}</h3>
-             <ul class="info">
-                <li><p>Population:<span> ${item.population}</span></p></li> 
-                 <li><p>Region:<span> ${item.region}</span></p></li>
-                 <li><p>Capital:<span> ${item.capital}</span></p></li>
-             </ul>   
-        </div>`;
+            <h3>${item.name.common}</h3>
+            <ul class="info">
+                <li><p>Population:<span> ${formattedPopulation}</span></p></li> 
+                <li><p>Region:<span> ${item.region}</span></p></li>
+                <li><p>Capital:<span> ${item.capital}</span></p></li>
+     </ul>   
+</div>
+</a>`;
         flags.appendChild(div);
     });
 }
@@ -97,8 +99,10 @@ input.addEventListener('input', (e) => {
 select.addEventListener('change', (e) => {
     flags.innerHTML = '';
     loader.classList.remove('hidden');
-    const url = `https://frontend-mentor-apis-6efy.onrender.com/countries?region=${e.target.value}`;
-
+    let url = `https://frontend-mentor-apis-6efy.onrender.com/countries?region=${e.target.value}`;
+     if(e.target.value === "All"){
+      url = `https://frontend-mentor-apis-6efy.onrender.com/countries`   
+     }
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -111,9 +115,9 @@ select.addEventListener('change', (e) => {
             error.classList.add('hidden');
                 createUI(data);
         })
-        .catch((err) => {
+        .catch((error) => {
             loader.classList.add('hidden');
-            err.classList.remove('hidden');
+            error.classList.remove('hidden');
         });
 });
 
