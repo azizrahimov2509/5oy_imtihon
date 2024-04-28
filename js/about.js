@@ -63,7 +63,7 @@ function createUI(item) {
                                      <ul class="infor">
                                     <li><p>Top Level Domain:<span> .${item.cca3}</span></p></li> 
                                     <li><p>Currencies:<span> ${item.currencies}</span></p></li>
-                                    <li><p>Language:<span> ${item.languages}</span></p></li>
+                                    <li><p>Language:<span> ${item.languages.slice(0,10)}</span></p></li>
                                  </ul>
                                 </div>
                                 <div class="border-countiries">

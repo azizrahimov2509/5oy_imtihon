@@ -11,6 +11,8 @@
     --card-h: #111517;
     --card-span: #111517;
     --card-p: #111517;
+    --shadow-color-light: rgba(0, 0, 0, 0.2); 
+    --shadow-color-dark: rgba(255, 255, 255, 0.1);
   }
 
   .dark-theme {
@@ -218,6 +220,13 @@ header{
   background-color: var(--card-bg);
   cursor: pointer;
   margin-bottom: 20px;
+  
+  transition: all 0.3s ease-in-out;
+}
+
+
+.flag-list:hover{
+  transform: scale(1.1);
 }
 
 .flag-list img{

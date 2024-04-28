@@ -87,6 +87,7 @@
 .cntr .flag-details .list-things .informs .infor{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 7px;
 }
 .cntr .flag-details .list-things .informs .infor p{
