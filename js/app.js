@@ -37,6 +37,43 @@ fetchImages("https://frontend-mentor-apis-6efy.onrender.com/countries");
 
 
 
+select.addEventListener('change', () => {
+    fetchData(select.value, input.value);
+});
+
+input.addEventListener('input', () => {
+    fetchData(select.value,input.value);
+});
+
+
+//   Search and Filter by regions
+function fetchData(region, search) {
+    flags.innerHTML = '';
+    loader.classList.remove('hidden');
+    let url = `https://frontend-mentor-apis-6efy.onrender.com/countries?search=${search}&region=${region} `;
+    if (region === "All") {
+        url = `https://frontend-mentor-apis-6efy.onrender.com/countries?search=${search}`;
+    }
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then((data) => {
+            loader.classList.add('hidden');
+            error.classList.add('hidden');
+            createUI(data);
+        })
+        .catch((error) => {
+            loader.classList.add('hidden');
+            error.classList.remove('hidden');
+        });
+}
+
+
+
 //UI
 
 function createUI(data) {
@@ -60,66 +97,6 @@ function createUI(data) {
         flags.appendChild(div);
     });
 }
-
-
-
-// Search
-
-input.addEventListener('input', (e) => {
-    flags.innerHTML = '';
-    loader.classList.remove('hidden');
-    const url = `https://frontend-mentor-apis-6efy.onrender.com/countries?search=${e.target.value}`;
-
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then((data) => {
-            loader.classList.add('hidden');
-            error.classList.add('hidden');
-            if (data.data && data.data.length > 0) {
-                createUI(data);
-            } else {
-                error.classList.remove('hidden');
-                error.innerHTML = `<h2 style="display: flex; justify-content: center;color: red;" >Malumot topilmadi!</h2>`;
-            }
-        })
-        .catch((err) => {
-            loader.classList.add('hidden');
-            err.classList.remove('hidden');
-        });
-});
-
-
-
-//  Filter by Regions
-select.addEventListener('change', (e) => {
-    flags.innerHTML = '';
-    loader.classList.remove('hidden');
-    let url = `https://frontend-mentor-apis-6efy.onrender.com/countries?region=${e.target.value}`;
-     if(e.target.value === "All"){
-      url = `https://frontend-mentor-apis-6efy.onrender.com/countries`   
-     }
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then((data) => {
-            loader.classList.add('hidden');
-            error.classList.add('hidden');
-                createUI(data);
-        })
-        .catch((error) => {
-            loader.classList.add('hidden');
-            error.classList.remove('hidden');
-        });
-});
 
 
 

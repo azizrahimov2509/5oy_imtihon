@@ -11,10 +11,6 @@ const details =document.getElementById('details');
 
 //Slug
 
-
-
-
-
 function fetchItem(query) {
     loader.classList.remove('hidden');
     errorElement.classList.add('hidden');

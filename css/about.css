@@ -315,6 +315,7 @@
         line-height: 32px;
         font-weight: 700;
         color: var(--card-p);
+        
     }
     .cntr .flag-details .list-things .informs .infor p span{
         font-family:'Nunito Sans';
@@ -322,6 +323,9 @@
         line-height: 32px;
         font-weight: 400;
         color: var(--card-span);
+        overflow-wrap: break-word; 
+        display: inline-block; 
+
     }
     
     .cntr .flag-details .list-things h3{
